@@ -1,0 +1,20 @@
+{
+  "font_color": "1.0 1.0 1.0 1.0",
+
+  "position_y": 0,
+
+  "stroke": {
+    "enabled": false,
+    "color": "0.0 0.0 0.0",
+    "opacity": 1.0,
+    "width": 2
+  },
+
+  "shadow": {
+    "enabled": true,
+    "color": "0.0 0.0 0.0",
+    "opacity": 0.75,
+    "distance": 4,
+    "angle": 315
+  }
+}

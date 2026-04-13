@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fcpxml version="1.9">
+    <resources>
+        <format id="r1" name="FFVideoFormat1080x1920p3000" frameDuration="100/3000s" width="1080" height="1920" colorSpace="1-1-1 (Rec. 709)"></format>
+        <effect id="r2" name="Basic Title" uid=".../Titles.localized/Bumper:Opener.localized/Basic Title.localized/Basic Title.moti"></effect>
+    </resources>
+    <library>
+        <event name="Auto generated Captions">
+            <project name="Neues Projekt">
+                <sequence format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k" duration="295000/3000s">
+                    <spine>
+                        <gap name="Gap" offset="0s" duration="295000/3000s">
+                            <title ref="r2" lane="1" offset="0/3000s" duration="3300/3000s" name="Wenn deine 3D Druckerdüse - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts0">Wenn deine 3D Druckerdüse</text-style>
+                                </text>
+                                <text-style-def id="ts0">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="3300/3000s" duration="2900/3000s" name="verstopft ist, dann solltest - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts1">verstopft ist, dann solltest</text-style>
+                                </text>
+                                <text-style-def id="ts1">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="6200/3000s" duration="1400/3000s" name="du das tun. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts2">du das tun.</text-style>
+                                </text>
+                                <text-style-def id="ts2">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="8200/3000s" duration="1400/3000s" name="Was geht ab, willkommen - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts3">Was geht ab, willkommen</text-style>
+                                </text>
+                                <text-style-def id="ts3">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="9600/3000s" duration="2000/3000s" name="im Bandschrank. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts4">im Bandschrank.</text-style>
+                                </text>
+                                <text-style-def id="ts4">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="12500/3000s" duration="1900/3000s" name="Wenn ihr zum Beispiel - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts5">Wenn ihr zum Beispiel</text-style>
+                                </text>
+                                <text-style-def id="ts5">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="14400/3000s" duration="4300/3000s" name="TPU druckt, dann habt - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts6">TPU druckt, dann habt</text-style>
+                                </text>
+                                <text-style-def id="ts6">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="18700/3000s" duration="2900/3000s" name="ihr das Risiko, das - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts7">ihr das Risiko, das</text-style>
+                                </text>
+                                <text-style-def id="ts7">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="21600/3000s" duration="2900/3000s" name="beim nächsten Druck zum - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts8">beim nächsten Druck zum</text-style>
+                                </text>
+                                <text-style-def id="ts8">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="24500/3000s" duration="3500/3000s" name="Beispiel mit PLA, - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts9">Beispiel mit PLA,</text-style>
+                                </text>
+                                <text-style-def id="ts9">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="28300/3000s" duration="1000/3000s" name="man hat es auch - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts10">man hat es auch</text-style>
+                                </text>
+                                <text-style-def id="ts10">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="29300/3000s" duration="2500/3000s" name="im letzten Video auch - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts11">im letzten Video auch</text-style>
+                                </text>
+                                <text-style-def id="ts11">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="31800/3000s" duration="5000/3000s" name="gesehen, Filamentreste, bis in - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts12">gesehen, Filamentreste, bis in</text-style>
+                                </text>
+                                <text-style-def id="ts12">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="36800/3000s" duration="3000/3000s" name="die Nozzle blockieren können, - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts13">die Nozzle blockieren können,</text-style>
+                                </text>
+                                <text-style-def id="ts13">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="40300/3000s" duration="4800/3000s" name="die Druckqualität beeinträchtigen können - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts14">die Druckqualität beeinträchtigen können</text-style>
+                                </text>
+                                <text-style-def id="ts14">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="45100/3000s" duration="2500/3000s" name="oder im schlimmsten Fall - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts15">oder im schlimmsten Fall</text-style>
+                                </text>
+                                <text-style-def id="ts15">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="47500/3000s" duration="1600/3000s" name="habt ihr sogar wie - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts16">habt ihr sogar wie</text-style>
+                                </text>
+                                <text-style-def id="ts16">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="49100/3000s" duration="3200/3000s" name="ich jetzt eine Verstopfung. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts17">ich jetzt eine Verstopfung.</text-style>
+                                </text>
+                                <text-style-def id="ts17">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="52700/3000s" duration="2300/3000s" name="Also nicht ich, sondern - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts18">Also nicht ich, sondern</text-style>
+                                </text>
+                                <text-style-def id="ts18">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="55000/3000s" duration="1500/3000s" name="eine Drucker. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts19">eine Drucker.</text-style>
+                                </text>
+                                <text-style-def id="ts19">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="57200/3000s" duration="2100/3000s" name="Man natürlich immer im - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts20">Man natürlich immer im</text-style>
+                                </text>
+                                <text-style-def id="ts20">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="59300/3000s" duration="1900/3000s" name="Maus probieren kann, das - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts21">Maus probieren kann, das</text-style>
+                                </text>
+                                <text-style-def id="ts21">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="61100/3000s" duration="2100/3000s" name="so eine kleine Nadel - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts22">so eine kleine Nadel</text-style>
+                                </text>
+                                <text-style-def id="ts22">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="63200/3000s" duration="2500/3000s" name="hier zu nehmen und - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts23">hier zu nehmen und</text-style>
+                                </text>
+                                <text-style-def id="ts23">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="65800/3000s" duration="3800/3000s" name="von unten in die - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts24">von unten in die</text-style>
+                                </text>
+                                <text-style-def id="ts24">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="69500/3000s" duration="2000/3000s" name="Nozzle zu pieksen. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts25">Nozzle zu pieksen.</text-style>
+                                </text>
+                                <text-style-def id="ts25">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="73500/3000s" duration="2100/3000s" name="In dem Fall Hollywood - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts26">In dem Fall Hollywood</text-style>
+                                </text>
+                                <text-style-def id="ts26">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="75600/3000s" duration="3800/3000s" name="Camera Perspektive hier. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts27">Camera Perspektive hier.</text-style>
+                                </text>
+                                <text-style-def id="ts27">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="80200/3000s" duration="2300/3000s" name="Das Toolhead ist übrigens - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts28">Das Toolhead ist übrigens</text-style>
+                                </text>
+                                <text-style-def id="ts28">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="82500/3000s" duration="2500/3000s" name="magnetisch, das könnt ihr - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts29">magnetisch, das könnt ihr</text-style>
+                                </text>
+                                <text-style-def id="ts29">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="85000/3000s" duration="2000/3000s" name="einfach abnehmen - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts30">einfach abnehmen</text-style>
+                                </text>
+                                <text-style-def id="ts30">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="87000/3000s" duration="1900/3000s" name="und dann kann man - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts31">und dann kann man</text-style>
+                                </text>
+                                <text-style-def id="ts31">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="88900/3000s" duration="4000/3000s" name="hier vorsichtig mit dieser - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts32">hier vorsichtig mit dieser</text-style>
+                                </text>
+                                <text-style-def id="ts32">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="92800/3000s" duration="4700/3000s" name="Nadel mal reinstechen. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts33">Nadel mal reinstechen.</text-style>
+                                </text>
+                                <text-style-def id="ts33">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="99800/3000s" duration="3500/3000s" name="Natürlich sollte vorher die - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts34">Natürlich sollte vorher die</text-style>
+                                </text>
+                                <text-style-def id="ts34">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="103300/3000s" duration="2700/3000s" name="Lüse auch heiß sein, - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts35">Lüse auch heiß sein,</text-style>
+                                </text>
+                                <text-style-def id="ts35">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="106300/3000s" duration="2800/3000s" name="bitte verbrennt euch nicht. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts36">bitte verbrennt euch nicht.</text-style>
+                                </text>
+                                <text-style-def id="ts36">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="109600/3000s" duration="2900/3000s" name="Das Ding hat 250 - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts37">Das Ding hat 250</text-style>
+                                </text>
+                                <text-style-def id="ts37">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="112500/3000s" duration="3100/3000s" name="Grad, das kann richtig - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts38">Grad, das kann richtig</text-style>
+                                </text>
+                                <text-style-def id="ts38">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="115600/3000s" duration="1100/3000s" name="weh tun. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts39">weh tun.</text-style>
+                                </text>
+                                <text-style-def id="ts39">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="118100/3000s" duration="4400/3000s" name="Ich glaube das nicht - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts40">Ich glaube das nicht</text-style>
+                                </text>
+                                <text-style-def id="ts40">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="122500/3000s" duration="2400/3000s" name="wirklich was zu holen, - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts41">wirklich was zu holen,</text-style>
+                                </text>
+                                <text-style-def id="ts41">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="125200/3000s" duration="2800/3000s" name="wir müssen Hater-Rügenschützer - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts42">wir müssen Hater-Rügenschützer</text-style>
+                                </text>
+                                <text-style-def id="ts42">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="127900/3000s" duration="900/3000s" name="auffahren. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts43">auffahren.</text-style>
+                                </text>
+                                <text-style-def id="ts43">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="129500/3000s" duration="2200/3000s" name="Zeit für den Cold - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts44">Zeit für den Cold</text-style>
+                                </text>
+                                <text-style-def id="ts44">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="131600/3000s" duration="2600/3000s" name="Pull, dafür müsst ihr - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts45">Pull, dafür müsst ihr</text-style>
+                                </text>
+                                <text-style-def id="ts45">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="134300/3000s" duration="4100/3000s" name="oben diesen PTFE Tube - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts46">oben diesen PTFE Tube</text-style>
+                                </text>
+                                <text-style-def id="ts46">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="138400/3000s" duration="1600/3000s" name="rausziehen. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts47">rausziehen.</text-style>
+                                </text>
+                                <text-style-def id="ts47">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="140900/3000s" duration="2500/3000s" name="So sieht das gut - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts48">So sieht das gut</text-style>
+                                </text>
+                                <text-style-def id="ts48">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="143300/3000s" duration="900/3000s" name="aus. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts49">aus.</text-style>
+                                </text>
+                                <text-style-def id="ts49">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="145300/3000s" duration="5000/3000s" name="Temperatur einmal 230 bis - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts50">Temperatur einmal 230 bis</text-style>
+                                </text>
+                                <text-style-def id="ts50">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="150200/3000s" duration="4900/3000s" name="240 Grad gestellt, kurz - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts51">240 Grad gestellt, kurz</text-style>
+                                </text>
+                                <text-style-def id="ts51">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="155100/3000s" duration="1100/3000s" name="warten. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts52">warten.</text-style>
+                                </text>
+                                <text-style-def id="ts52">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="157000/3000s" duration="3200/3000s" name="So lange extrudieren bis - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts53">So lange extrudieren bis</text-style>
+                                </text>
+                                <text-style-def id="ts53">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="160200/3000s" duration="2600/3000s" name="unten was auskommt. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts54">unten was auskommt.</text-style>
+                                </text>
+                                <text-style-def id="ts54">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="163500/3000s" duration="5600/3000s" name="Temperatur auf ungefähr 75 - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts55">Temperatur auf ungefähr 75</text-style>
+                                </text>
+                                <text-style-def id="ts55">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="169100/3000s" duration="1400/3000s" name="Grad. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts56">Grad.</text-style>
+                                </text>
+                                <text-style-def id="ts56">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="170500/3000s" duration="4100/3000s" name="Während dem Abkühlen ruhig - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts57">Während dem Abkühlen ruhig</text-style>
+                                </text>
+                                <text-style-def id="ts57">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="174700/3000s" duration="2800/3000s" name="noch ein, zwei Mal - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts58">noch ein, zwei Mal</text-style>
+                                </text>
+                                <text-style-def id="ts58">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="177500/3000s" duration="2800/3000s" name="rein extrudieren. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts59">rein extrudieren.</text-style>
+                                </text>
+                                <text-style-def id="ts59">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="181100/3000s" duration="2600/3000s" name="Und wenn er knackt, - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts60">Und wenn er knackt,</text-style>
+                                </text>
+                                <text-style-def id="ts60">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="184400/3000s" duration="1900/3000s" name="das hört ihr gleich - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts61">das hört ihr gleich</text-style>
+                                </text>
+                                <text-style-def id="ts61">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="186300/3000s" duration="2200/3000s" name="aufhören. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts62">aufhören.</text-style>
+                                </text>
+                                <text-style-def id="ts62">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="189000/3000s" duration="2300/3000s" name="Das passiert ungefähr bei - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts63">Das passiert ungefähr bei</text-style>
+                                </text>
+                                <text-style-def id="ts63">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="191300/3000s" duration="2200/3000s" name="170 Grad. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts64">170 Grad.</text-style>
+                                </text>
+                                <text-style-def id="ts64">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="194500/3000s" duration="1300/3000s" name="Wette das? - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts65">Wette das?</text-style>
+                                </text>
+                                <text-style-def id="ts65">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="204500/3000s" duration="3100/3000s" name="So die Düse hat - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts66">So die Düse hat</text-style>
+                                </text>
+                                <text-style-def id="ts66">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="207600/3000s" duration="2800/3000s" name="jetzt die 75 Grad - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts67">jetzt die 75 Grad</text-style>
+                                </text>
+                                <text-style-def id="ts67">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="210400/3000s" duration="2900/3000s" name="erreicht und wir ziehen - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts68">erreicht und wir ziehen</text-style>
+                                </text>
+                                <text-style-def id="ts68">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="213200/3000s" duration="1600/3000s" name="hier oben. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts69">hier oben.</text-style>
+                                </text>
+                                <text-style-def id="ts69">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="215900/3000s" duration="1800/3000s" name="Ich merke das geht - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts70">Ich merke das geht</text-style>
+                                </text>
+                                <text-style-def id="ts70">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="217700/3000s" duration="3400/3000s" name="nicht ohne Kraft, also - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts71">nicht ohne Kraft, also</text-style>
+                                </text>
+                                <text-style-def id="ts71">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="221000/3000s" duration="3900/3000s" name="retract dich ein klein - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts72">retract dich ein klein</text-style>
+                                </text>
+                                <text-style-def id="ts72">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="224900/3000s" duration="1100/3000s" name="wenig. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts73">wenig.</text-style>
+                                </text>
+                                <text-style-def id="ts73">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="237800/3000s" duration="5200/3000s" name="So nun Spitze einmal - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts74">So nun Spitze einmal</text-style>
+                                </text>
+                                <text-style-def id="ts74">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="243000/3000s" duration="6900/3000s" name="abschneiden, sauber wieder einführen - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts75">abschneiden, sauber wieder einführen</text-style>
+                                </text>
+                                <text-style-def id="ts75">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="249900/3000s" duration="3800/3000s" name="und ein wenig den - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts76">und ein wenig den</text-style>
+                                </text>
+                                <text-style-def id="ts76">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="253700/3000s" duration="4700/3000s" name="Extrude-Button drücken bis - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts77">Extrude-Button drücken bis</text-style>
+                                </text>
+                                <text-style-def id="ts77">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="258500/3000s" duration="2900/3000s" name="das Filament auch wirklich - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts78">das Filament auch wirklich</text-style>
+                                </text>
+                                <text-style-def id="ts78">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="261400/3000s" duration="2600/3000s" name="reingezogen wird. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts79">reingezogen wird.</text-style>
+                                </text>
+                                <text-style-def id="ts79">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="264400/3000s" duration="4600/3000s" name="PTFE einfach wieder reinstecken, - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts80">PTFE einfach wieder reinstecken,</text-style>
+                                </text>
+                                <text-style-def id="ts80">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="269900/3000s" duration="2700/3000s" name="fest. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts81">fest.</text-style>
+                                </text>
+                                <text-style-def id="ts81">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="278700/3000s" duration="2800/3000s" name="Abdecken drauf. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts82">Abdecken drauf.</text-style>
+                                </text>
+                                <text-style-def id="ts82">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="282100/3000s" duration="5800/3000s" name="Aufgewärmt, bisschen extrudiert, spuckt - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts83">Aufgewärmt, bisschen extrudiert, spuckt</text-style>
+                                </text>
+                                <text-style-def id="ts83">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="287900/3000s" duration="2300/3000s" name="wieder Filament aus. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts84">wieder Filament aus.</text-style>
+                                </text>
+                                <text-style-def id="ts84">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                            <title ref="r2" lane="1" offset="291100/3000s" duration="900/3000s" name="Wunderbar. - Basic Title">
+                                <param name="Position" key="9999/999166631/999166633/1/100/101" value="0 0"></param>
+                                <param name="Flatten" key="999/999166631/999166633/2/351" value="1"></param>
+                                <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>
+                                <text>
+                                    <text-style ref="ts85">Wunderbar.</text-style>
+                                </text>
+                                <text-style-def id="ts85">
+                                    <text-style font="Helvetica" fontSize="18" fontFace="Regular" fontColor="1.0 1.0 1.0 1.0" shadowColor="0.0 0.0 0.0 0.75" shadowOffset="4 315" alignment="center"></text-style>
+                                </text-style-def>
+                            </title>
+                        </gap>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+    </library>
+</fcpxml>
