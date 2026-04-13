@@ -1,4 +1,4 @@
-# easy-py-fcp-captions
+# Final Cut Pro - Easy Captions for Shorts and Reels
 
 > Automatically generate Final Cut Pro captions from any audio file using a local Whisper model.
 
