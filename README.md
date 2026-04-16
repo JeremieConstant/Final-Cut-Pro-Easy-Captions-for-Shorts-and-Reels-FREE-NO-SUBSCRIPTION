@@ -1,17 +1,19 @@
 # Final Cut Pro - Easy Captions for Shorts and Reels
 
+<img src="easy-fcp-captions.png" alt="easy-py-fcp-captions" width="100%">
+
 > Automatically generate Final Cut Pro captions from any audio file using a local Whisper model.
 
 ---
 
 ## What it does
 
-The existing FCP Capabilites for Subtitles are laughable, and existing Plugins are tied to subscription.
-I don't want that, so i built my own solution and wanted to share it for free.
+The existing FCP capabilities for subtitles are laughable, and existing plugins are tied to subscriptions.
+I don't want that, so I built my own solution and wanted to share it for free.
 
-It Transcribes your audio with [OpenAI Whisper](https://github.com/openai/whisper) and exports a ready-to-import `.fcpxml` file containing styled title overlays — one per caption group — perfectly timed to your speech.
+It transcribes your audio with [OpenAI Whisper](https://github.com/openai/whisper) and exports a ready-to-import `.fcpxml` file containing styled title overlays — one per caption group — perfectly timed to your speech.
 
-No cloud & No subscriptions, works offline on your device.
+No cloud. No subscriptions. Works offline on your device.
 
 ---
 
@@ -21,9 +23,9 @@ No cloud & No subscriptions, works offline on your device.
 - **Auto-detects** installed models or downloads the one you pick
 - **Language selection** — auto-detect or specify manually (de, en, fr, …)
 - **Configurable captions** — max words per caption, font, font size, font face
-- **Portrait & landscape** support (1080×1920 / 1920×1080)
+- **Any resolution** — set width × height freely in `style.json` (portrait, landscape, custom)
 - **Persistent settings** — your last choices become the new defaults
-- **`style.json`** for fine-grained visual control: text color, stroke, drop shadow
+- **`style.json`** for fine-grained visual control: resolution, text color, stroke, drop shadow
 - **Zero manual setup** — a virtual environment is created and managed automatically
 
 ---
@@ -38,7 +40,8 @@ No manual `pip install` needed — the script handles everything on first run.
 ---
 
 ## Usage
-Export your Audio first, you can use any default settings.
+
+Export your audio first — any format works (`.m4a`, `.wav`, `.mp3`, …).
 
 ```bash
 python3 fcp_captions.py path/to/audio.m4a
@@ -56,19 +59,22 @@ The script walks you through model selection, language, and caption settings int
 | `-s N` | Font size |
 | `-f FONT` | Font name |
 | `--font-face FACE` | `Regular` or `Bold` |
-| `--landscape` | Use 1920×1080 instead of default portrait |
 | `-o FILE` | Output path for the `.fcpxml` file |
 
 ---
 
 ## Style configuration
 
-Edit `style.json` to control the visual appearance of your captions:
+Edit `style.json` to control the visual appearance and resolution of your captions:
 
 ```json
 {
   "font_color": "1.0 1.0 1.0 1.0",
   "position_y": 0,
+  "resolution": {
+    "width": 1080,
+    "height": 1920
+  },
   "stroke": {
     "enabled": false,
     "color": "0.0 0.0 0.0",

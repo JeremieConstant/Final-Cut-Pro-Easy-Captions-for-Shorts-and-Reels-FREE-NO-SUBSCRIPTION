@@ -59,7 +59,6 @@ DEFAULT_SETTINGS = {
     "font_size": 18,
     "font": "Helvetica",
     "font_face": "Regular",
-    "portrait": True,
 }
 
 DEFAULT_STYLE = {
@@ -69,21 +68,27 @@ DEFAULT_STYLE = {
     # Vertical position offset in pixels (0 = centre of frame)
     "position_y": 0,
 
-    # Kontur / Stroke  -------------------------------------------------------
-    "stroke": {
-        "enabled": False,
-        "color": "0.0 0.0 0.0",   # RGB (opacity set separately)
-        "opacity": 1.0,            # 0.0–1.0  →  Deckkraft
-        "width": 2,                # Breite
+    # Output resolution
+    "resolution": {
+        "width": 1080,
+        "height": 1920,
     },
 
-    # Schattenwurf / Drop Shadow  --------------------------------------------
+    # Stroke  ----------------------------------------------------------------
+    "stroke": {
+        "enabled": False,
+        "color": "0.0 0.0 0.0",
+        "opacity": 1.0,
+        "width": 2,
+    },
+
+    # Drop Shadow  -----------------------------------------------------------
     "shadow": {
         "enabled": True,
-        "color": "0.0 0.0 0.0",   # RGB (opacity set separately)
-        "opacity": 0.75,           # 0.0–1.0  →  Deckkraft
-        "distance": 4,             # Entfernung
-        "angle": 315,              # Winkel in Grad
+        "color": "0.0 0.0 0.0",
+        "opacity": 0.75,
+        "distance": 4,
+        "angle": 315,
     },
 }
 
@@ -106,7 +111,7 @@ def load_settings() -> dict:
 
 def save_settings(settings: dict):
     """Persist caption settings to settings.json."""
-    keys = ["max_words", "font_size", "font", "font_face", "portrait"]
+    keys = ["max_words", "font_size", "font", "font_face"]
     data = {k: settings[k] for k in keys if k in settings}
     SETTINGS_FILE.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
 
@@ -124,7 +129,7 @@ def load_style() -> dict:
         # Deep-merge so new default keys survive manual deletions
         merged = dict(DEFAULT_STYLE)
         merged.update(saved)
-        for section in ("stroke", "shadow"):
+        for section in ("stroke", "shadow", "resolution"):
             merged[section] = {**DEFAULT_STYLE[section], **saved.get(section, {})}
         return merged
     except json.JSONDecodeError:
@@ -229,30 +234,12 @@ def configure_captions(saved: dict) -> dict:
     font       = ask("Font name", "font")
     font_face  = ask("Font face (Regular/Bold)", "font_face")
 
-    print("\n=== Video Format ===")
-    print("1) 1920x1080 (Landscape)")
-    print("2) 1080x1920 (Portrait/Vertical)")
-    portrait_default = "2" if saved.get("portrait", DEFAULT_SETTINGS["portrait"]) else "1"
-    fmt_choice = input(f"Choice [{portrait_default}]: ").strip() or portrait_default
-    portrait = fmt_choice == "2"
-
-    if portrait:
-        width, height = 1080, 1920
-        format_name = "FFVideoFormat1080x1920p3000"
-    else:
-        width, height = 1920, 1080
-        format_name = "FFVideoFormat1080p3000"
-
     return {
         "max_words": max_words,
         "font_size": font_size,
         "font": font,
         "font_face": font_face,
         "bold": font_face.lower() == "bold",
-        "portrait": portrait,
-        "width": width,
-        "height": height,
-        "format_name": format_name,
     }
 
 
@@ -340,6 +327,11 @@ def build_style_attrs(settings: dict, style: dict) -> str:
     return attrs
 
 
+def _format_name(width: int, height: int) -> str:
+    """Derive the FCP format string from pixel dimensions."""
+    return f"FFVideoFormat{width}x{height}p3000" if width != height else f"FFVideoFormat{width}p3000"
+
+
 def generate_fcpxml(captions, settings, style, project_name):
     frame_duration = "100/3000s"
     total_seconds = (captions[-1]["end"] + 1) if captions else 1
@@ -347,13 +339,17 @@ def generate_fcpxml(captions, settings, style, project_name):
     gap_frames = total_frames * 100
     pos_y = style.get("position_y", 0)
 
+    res = style.get("resolution", DEFAULT_STYLE["resolution"])
+    width, height = res["width"], res["height"]
+    fmt_name = _format_name(width, height)
+
     lines = [
         '<?xml version="1.0" encoding="utf-8"?>',
         '<fcpxml version="1.9">',
         '    <resources>',
-        f'        <format id="r1" name="{settings["format_name"]}" '
+        f'        <format id="r1" name="{fmt_name}" '
         f'frameDuration="{frame_duration}" '
-        f'width="{settings["width"]}" height="{settings["height"]}" '
+        f'width="{width}" height="{height}" '
         f'colorSpace="1-1-1 (Rec. 709)"></format>',
         '        <effect id="r2" name="Basic Title" '
         'uid=".../Titles.localized/Bumper:Opener.localized/'
@@ -425,8 +421,6 @@ def main():
     parser.add_argument("-s", "--font-size", type=int, help="Font size")
     parser.add_argument("-f", "--font", help="Font name")
     parser.add_argument("--font-face", help="Font face (Regular/Bold)")
-    parser.add_argument("--landscape", action="store_true",
-                        help="Use landscape format (1920x1080) instead of default portrait")
     parser.add_argument("-o", "--output", help="Output .fcpxml file path")
     args = parser.parse_args()
 
@@ -454,18 +448,14 @@ def main():
         language = select_language()
 
     # Caption settings – CLI args override saved, saved override defaults
-    if any([args.max_words, args.font_size, args.font, args.font_face, args.landscape]):
-        is_portrait = not args.landscape
+    if any([args.max_words, args.font_size, args.font, args.font_face]):
+        font_face = args.font_face or saved_settings["font_face"]
         settings = {
             "max_words": args.max_words or saved_settings["max_words"],
             "font_size": args.font_size or saved_settings["font_size"],
             "font": args.font or saved_settings["font"],
-            "font_face": args.font_face or saved_settings["font_face"],
-            "bold": (args.font_face or saved_settings["font_face"]).lower() == "bold",
-            "portrait": is_portrait,
-            "width": 1080 if is_portrait else 1920,
-            "height": 1920 if is_portrait else 1080,
-            "format_name": "FFVideoFormat1080x1920p3000" if is_portrait else "FFVideoFormat1080p3000",
+            "font_face": font_face,
+            "bold": font_face.lower() == "bold",
         }
     else:
         settings = configure_captions(saved_settings)

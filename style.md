@@ -12,6 +12,26 @@ Default: `"1.0 1.0 1.0 1.0"` (white, fully opaque)
 Vertical position of the text in pixels, relative to the center of the frame.  
 `0` = centered, negative = shift down, positive = shift up.
 
+## resolution
+Output video dimensions in pixels. The script derives the FCP format name automatically.
+
+| Field    | Type | Description          | Common values              |
+|----------|------|----------------------|----------------------------|
+| `width`  | int  | Frame width in px    | `1080` (portrait), `1920` (landscape) |
+| `height` | int  | Frame height in px   | `1920` (portrait), `1080` (landscape) |
+
+**Examples:**
+
+```json
+"resolution": { "width": 1080, "height": 1920 }
+```
+→ Portrait / Vertical (Shorts, Reels, TikTok)
+
+```json
+"resolution": { "width": 1920, "height": 1080 }
+```
+→ Landscape / Widescreen (YouTube, standard video)
+
 ---
 
 ## stroke

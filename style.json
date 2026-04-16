@@ -3,6 +3,11 @@
 
   "position_y": 0,
 
+  "resolution": {
+    "width": 1080,
+    "height": 1920
+  },
+
   "stroke": {
     "enabled": false,
     "color": "0.0 0.0 0.0",
