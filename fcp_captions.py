@@ -469,10 +469,10 @@ def main():
     captions = split_segments_by_word_count(result, settings["max_words"])
     print(f"\nGenerated {len(captions)} caption segments.")
 
-    project_name = Path(audio_path).stem
+    project_name = Path(audio_path).stem + "_captions"
     fcpxml = generate_fcpxml(captions, settings, style, project_name)
 
-    output_path = args.output or (os.path.splitext(audio_path)[0] + ".fcpxml")
+    output_path = args.output or (os.path.splitext(audio_path)[0] + "_captions.fcpxml")
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(fcpxml)
 
