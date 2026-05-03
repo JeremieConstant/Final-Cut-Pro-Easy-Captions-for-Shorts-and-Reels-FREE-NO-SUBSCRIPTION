@@ -1,6 +1,4 @@
 {
-  "font_color": "1.0 1.0 1.0 1.0",
-
   "position_y": 0,
 
   "resolution": {
@@ -8,18 +6,26 @@
     "height": 1920
   },
 
+  "face": {
+    "enabled": true,
+    "color": "1.0 1.0 1.0",
+    "opacity": 1.0
+  },
+
   "stroke": {
-    "enabled": false,
+    "enabled": true,
     "color": "0.0 0.0 0.0",
     "opacity": 1.0,
+    "blur": 0,
     "width": 2
   },
 
   "shadow": {
     "enabled": true,
     "color": "0.0 0.0 0.0",
-    "opacity": 0.75,
-    "distance": 4,
-    "angle": 315
+    "opacity": 1.0,
+    "blur": 0,
+    "distance": 0,
+    "angle": 0
   }
 }

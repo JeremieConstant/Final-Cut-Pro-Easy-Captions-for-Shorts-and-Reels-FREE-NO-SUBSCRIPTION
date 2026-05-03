@@ -1,15 +1,15 @@
 # style.json – Reference
 
 All colors are specified as RGB strings: `"R G B"` with values from `0.0` to `1.0`.
+Opacity is set separately as a float (`0.0`–`1.0`).
+
+The three sections (`face`, `stroke`, `shadow`) mirror the FCP inspector groups
+**Stil**, **Kontur** and **Schattenwurf**.
 
 ---
 
-## font_color
-Text color as an RGBA string `"R G B A"`.  
-Default: `"1.0 1.0 1.0 1.0"` (white, fully opaque)
-
 ## position_y
-Vertical position of the text in pixels, relative to the center of the frame.  
+Vertical position of the text in pixels, relative to the center of the frame.
 `0` = centered, negative = shift down, positive = shift up.
 
 ## resolution
@@ -34,23 +34,38 @@ Output video dimensions in pixels. The script derives the FCP format name automa
 
 ---
 
-## stroke
+## face (Stil)
+
+The text fill — what FCP calls **Stil**. Enabled by default.
+When `enabled` is `false`, the face is rendered fully transparent (alpha = 0).
+
+| Field     | Type   | Description                                  |
+|-----------|--------|----------------------------------------------|
+| `enabled` | bool   | Show the text face (`true` / `false`)        |
+| `color`   | string | Color as `"R G B"`                           |
+| `opacity` | float  | Opacity `0.0`–`1.0` (0 % – 100 %)            |
+
+---
+
+## stroke (Kontur)
 
 | Field     | Type   | Description                                  |
 |-----------|--------|----------------------------------------------|
 | `enabled` | bool   | Enable stroke (`true` / `false`)             |
 | `color`   | string | Color as `"R G B"`                           |
-| `opacity` | float  | Opacity `0.0`–`1.0` (0 % – 100 %)           |
+| `opacity` | float  | Opacity `0.0`–`1.0` (0 % – 100 %)            |
+| `blur`    | number | Stroke blur radius (Weichzeichnen). `0` = sharp |
 | `width`   | int    | Stroke width in points                       |
 
 ---
 
-## shadow
+## shadow (Schattenwurf)
 
 | Field      | Type   | Description                                  |
 |------------|--------|----------------------------------------------|
 | `enabled`  | bool   | Enable shadow (`true` / `false`)             |
 | `color`    | string | Color as `"R G B"`                           |
-| `opacity`  | float  | Opacity `0.0`–`1.0` (0 % – 100 %)           |
-| `distance` | int    | Shadow distance in points                    |
-| `angle`    | int    | Angle in degrees (`315` = upper left)        |
+| `opacity`  | float  | Opacity `0.0`–`1.0` (0 % – 100 %)            |
+| `blur`     | number | Shadow blur radius (Weichzeichnen)           |
+| `distance` | int    | Shadow distance in points (Entfernung)       |
+| `angle`    | int    | Angle in degrees (Winkel; `315` = upper left)|

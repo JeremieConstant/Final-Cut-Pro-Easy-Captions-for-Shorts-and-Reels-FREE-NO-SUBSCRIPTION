@@ -62,9 +62,6 @@ DEFAULT_SETTINGS = {
 }
 
 DEFAULT_STYLE = {
-    # Text color as RGBA (0.0–1.0 per channel)
-    "font_color": "1.0 1.0 1.0 1.0",
-
     # Vertical position offset in pixels (0 = centre of frame)
     "position_y": 0,
 
@@ -74,21 +71,30 @@ DEFAULT_STYLE = {
         "height": 1920,
     },
 
-    # Stroke  ----------------------------------------------------------------
+    # Face / Stil  -----------------------------------------------------------
+    "face": {
+        "enabled": True,
+        "color": "1.0 1.0 1.0",
+        "opacity": 1.0,
+    },
+
+    # Stroke / Kontur  -------------------------------------------------------
     "stroke": {
-        "enabled": False,
+        "enabled": True,
         "color": "0.0 0.0 0.0",
         "opacity": 1.0,
+        "blur": 0,
         "width": 2,
     },
 
-    # Drop Shadow  -----------------------------------------------------------
+    # Drop Shadow / Schattenwurf  --------------------------------------------
     "shadow": {
         "enabled": True,
         "color": "0.0 0.0 0.0",
-        "opacity": 0.75,
-        "distance": 4,
-        "angle": 315,
+        "opacity": 1.0,
+        "blur": 0,
+        "distance": 0,
+        "angle": 0,
     },
 }
 
@@ -126,15 +132,27 @@ def load_style() -> dict:
 
     try:
         saved = json.loads(STYLE_FILE.read_text(encoding="utf-8"))
-        # Deep-merge so new default keys survive manual deletions
-        merged = dict(DEFAULT_STYLE)
-        merged.update(saved)
-        for section in ("stroke", "shadow", "resolution"):
-            merged[section] = {**DEFAULT_STYLE[section], **saved.get(section, {})}
-        return merged
     except json.JSONDecodeError:
         print(f"Warning: Could not parse {STYLE_FILE}, using defaults.")
         return dict(DEFAULT_STYLE)
+
+    # Backwards compat: legacy "font_color" RGBA string → face section
+    if "font_color" in saved and "face" not in saved:
+        parts = saved["font_color"].split()
+        if len(parts) >= 3:
+            opacity = float(parts[3]) if len(parts) >= 4 else 1.0
+            saved["face"] = {
+                "enabled": True,
+                "color": " ".join(parts[:3]),
+                "opacity": opacity,
+            }
+
+    # Deep-merge so new default keys survive manual deletions
+    merged = dict(DEFAULT_STYLE)
+    merged.update(saved)
+    for section in ("face", "stroke", "shadow", "resolution"):
+        merged[section] = {**DEFAULT_STYLE[section], **saved.get(section, {})}
+    return merged
 
 
 # ---------------------------------------------------------------------------
@@ -301,11 +319,15 @@ def _rgba(rgb_str: str, opacity: float) -> str:
 
 def build_style_attrs(settings: dict, style: dict) -> str:
     """Build the text-style XML attribute string from settings + style config."""
+    face = style.get("face", DEFAULT_STYLE["face"])
+    face_opacity = face.get("opacity", 1.0) if face.get("enabled", True) else 0.0
+    face_color = _rgba(face.get("color", "1.0 1.0 1.0"), face_opacity)
+
     attrs = (
         f'font="{_xml_escape(settings["font"])}" '
         f'fontSize="{settings["font_size"]}" '
         f'fontFace="{settings["font_face"]}" '
-        f'fontColor="{style["font_color"]}"'
+        f'fontColor="{face_color}"'
     )
 
     stroke = style.get("stroke", {})
@@ -316,12 +338,18 @@ def build_style_attrs(settings: dict, style: dict) -> str:
             f' strokeColor="{color}"'
             f' strokeWidth="{stroke.get("width", 2)}"'
         )
+        blur = stroke.get("blur", 0)
+        if blur:
+            attrs += f' strokeBlurRadius="{blur}"'
 
     shadow = style.get("shadow", {})
     if shadow.get("enabled", True):
         color = _rgba(shadow["color"], shadow.get("opacity", 0.75))
         offset = f'{shadow.get("distance", 4)} {shadow.get("angle", 315)}'
         attrs += f' shadowColor="{color}" shadowOffset="{offset}"'
+        blur = shadow.get("blur", 0)
+        if blur:
+            attrs += f' shadowBlurRadius="{blur}"'
 
     attrs += ' alignment="center"'
     return attrs
