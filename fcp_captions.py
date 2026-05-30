@@ -312,9 +312,19 @@ def _xml_escape(text):
             .replace('"', "&quot;"))
 
 
+def _fmt_num(n) -> str:
+    """Compact numeric formatting: drop trailing zeros (1.0 → '1', 0.75 → '0.75')."""
+    if isinstance(n, int):
+        return str(n)
+    if float(n).is_integer():
+        return str(int(n))
+    return f"{n:.2f}".rstrip("0").rstrip(".")
+
+
 def _rgba(rgb_str: str, opacity: float) -> str:
-    """Combine 'R G B' string + opacity float into 'R G B A' FCPXML value."""
-    return f"{rgb_str} {opacity:.2f}"
+    """Combine 'R G B' string + opacity float into 'R G B A' FCPXML value (compact format)."""
+    rgb = " ".join(_fmt_num(float(c)) for c in rgb_str.split())
+    return f"{rgb} {_fmt_num(opacity)}"
 
 
 def build_style_attrs(settings: dict, style: dict) -> str:
@@ -333,26 +343,65 @@ def build_style_attrs(settings: dict, style: dict) -> str:
     stroke = style.get("stroke", {})
     if stroke.get("enabled", False):
         color = _rgba(stroke["color"], stroke.get("opacity", 1.0))
+        # strokeWidth must be NEGATIVE: that draws the outline outside the glyph
+        # so the face fill stays visible. A positive value strokes inward and
+        # paints over the fill, making the text appear to have no fill at all.
+        stroke_width = -abs(stroke.get("width", 2))
         attrs += (
             f' bold="1"'
             f' strokeColor="{color}"'
-            f' strokeWidth="{stroke.get("width", 2)}"'
+            f' strokeWidth="{_fmt_num(stroke_width)}"'
         )
-        blur = stroke.get("blur", 0)
-        if blur:
-            attrs += f' strokeBlurRadius="{blur}"'
 
     shadow = style.get("shadow", {})
     if shadow.get("enabled", True):
         color = _rgba(shadow["color"], shadow.get("opacity", 0.75))
-        offset = f'{shadow.get("distance", 4)} {shadow.get("angle", 315)}'
-        attrs += f' shadowColor="{color}" shadowOffset="{offset}"'
+        attrs += f' shadowColor="{color}"'
+        distance = shadow.get("distance", 4)
+        angle = shadow.get("angle", 315)
+        if distance or angle:
+            attrs += f' shadowOffset="{distance} {angle}"'
         blur = shadow.get("blur", 0)
         if blur:
             attrs += f' shadowBlurRadius="{blur}"'
 
     attrs += ' alignment="center"'
     return attrs
+
+
+def build_title_params(style: dict, indent: str) -> list[str]:
+    """Build the <param> elements that go inside <title> (above <text>)."""
+    lines = [
+        f'{indent}<param name="Flatten" '
+        f'key="9999/999166631/999166633/2/351" value="1"></param>',
+        f'{indent}<param name="Alignment" '
+        f'key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>',
+    ]
+
+    # Face / Stil — FCP only renders the face when these explicit params are present.
+    # Without them the Stil checkbox imports as off and the text fill is invisible.
+    face = style.get("face", DEFAULT_STYLE["face"])
+    if face.get("enabled", True):
+        face_rgb = " ".join(_fmt_num(float(c)) for c in face.get("color", "1 1 1").split())
+        lines += [
+            f'{indent}<param name="Farbe" '
+            f'key="9999/999166631/999166633/5/999166635/14/16" value="{face_rgb}"></param>',
+            f'{indent}<param name="Randmodus" '
+            f'key="9999/999166631/999166633/5/999166635/14/18/5" value="1 (Wiederholen)"></param>',
+        ]
+
+    stroke = style.get("stroke", {})
+    if stroke.get("enabled", False):
+        blur = stroke.get("blur", 0)
+        if blur:
+            lines.append(
+                f'{indent}<param name="Weichzeichnen" '
+                f'key="9999/999166631/999166633/5/999166635/30/76" '
+                f'value="{blur} {blur}"></param>'
+            )
+
+    lines.append(f'{indent}<param name="disableDRT" key="3733" value="1"></param>')
+    return lines
 
 
 def _format_name(width: int, height: int) -> str:
@@ -372,8 +421,10 @@ def generate_fcpxml(captions, settings, style, project_name):
     fmt_name = _format_name(width, height)
 
     lines = [
-        '<?xml version="1.0" encoding="utf-8"?>',
-        '<fcpxml version="1.9">',
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<!DOCTYPE fcpxml>',
+        '',
+        '<fcpxml version="1.14">',
         '    <resources>',
         f'        <format id="r1" name="{fmt_name}" '
         f'frameDuration="{frame_duration}" '
@@ -391,37 +442,62 @@ def generate_fcpxml(captions, settings, style, project_name):
         f'duration="{total_frames * 100}/3000s">',
         '                    <spine>',
         f'                        <gap name="Gap" offset="0s" duration="{gap_frames}/3000s">',
+        '                            <spine lane="1" offset="0s">',
     ]
 
     style_attrs = build_style_attrs(settings, style)
+    title_indent = ' ' * 36
+    title_params = build_title_params(style, title_indent)
 
+    prev_end = 0
     for i, cap in enumerate(captions):
         offset_frames = seconds_to_frames(cap["start"]) * 100
         duration_frames = max(seconds_to_frames(cap["end"] - cap["start"]), 1) * 100
+
+        # Frame-rounding can place a caption's start 1 frame before the previous
+        # caption's end. Inside a single connected storyline clips must be strictly
+        # sequential — an overlap makes FCP drop the real title and substitute an
+        # empty "Titel" placeholder. Clamp the start so titles never overlap.
+        if offset_frames < prev_end:
+            offset_frames = prev_end
+
+        # Insert a connected-storyline gap clip when there's space between titles.
+        # FCP needs the inner spine to be a contiguous timeline; without explicit
+        # Lücke clips the imported titles get incomplete state (Stil toggle off).
+        if offset_frames > prev_end:
+            lines.append(
+                f'                                <gap name="Lücke" '
+                f'offset="{prev_end}/3000s" start="3600s" '
+                f'duration="{offset_frames - prev_end}/3000s"></gap>'
+            )
+
         ts_id = f"ts{i}"
         title_name = _xml_escape(f'{cap["text"]} - Basic Title')
         text = _xml_escape(cap["text"])
 
+        lines.append(
+            f'                                <title ref="r2" '
+            f'offset="{offset_frames}/3000s" '
+            f'name="{title_name}" '
+            f'start="100/3000s" duration="{duration_frames}/3000s">'
+        )
+        lines.extend(title_params)
         lines += [
-            f'                            <title ref="r2" lane="1" '
-            f'offset="{offset_frames}/3000s" duration="{duration_frames}/3000s" '
-            f'name="{title_name}">',
-            f'                                <param name="Position" '
-            f'key="9999/999166631/999166633/1/100/101" value="0 {pos_y}"></param>',
-            '                                <param name="Flatten" '
-            'key="999/999166631/999166633/2/351" value="1"></param>',
-            '                                <param name="Alignment" '
-            'key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"></param>',
-            '                                <text>',
-            f'                                    <text-style ref="{ts_id}">{text}</text-style>',
-            '                                </text>',
-            f'                                <text-style-def id="{ts_id}">',
-            f'                                    <text-style {style_attrs}></text-style>',
-            '                                </text-style-def>',
-            '                            </title>',
+            f'{title_indent}<text>',
+            f'{title_indent}    <text-style ref="{ts_id}">{text}</text-style>',
+            f'{title_indent}</text>',
+            f'{title_indent}<text-style-def id="{ts_id}">',
+            f'{title_indent}    <text-style {style_attrs}></text-style>',
+            f'{title_indent}</text-style-def>',
         ]
+        if pos_y:
+            lines.append(f'{title_indent}<adjust-transform position="0 {pos_y}"></adjust-transform>')
+        lines.append('                                </title>')
+
+        prev_end = offset_frames + duration_frames
 
     lines += [
+        '                            </spine>',
         '                        </gap>',
         '                    </spine>',
         '                </sequence>',
